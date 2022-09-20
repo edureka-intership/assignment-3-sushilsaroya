@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>question-1</title>
+  </head>
+  <body>
+    <script>
+      class restaurantManager {
+        restaurantList = [
+          {
+            id: 1,
+            restaurantName: "KFC",
+            address: "Anand Vihar",
+            city: "Delhi",
+          },
+          {
+            id: 2,
+            restaurantName: "Domino",
+            address: "Savita Vihar",
+            city: "Delhi",
+          },
+          {
+            id: 3,
+            restaurantName: "Burger King",
+            address: "Civil Lines",
+            city: "Pune",
+          },
+          {
+            id: 4,
+            restaurantName: "Subway",
+            address: "Cantonment",
+            city: "Mumbai",
+          },
+        ];
+
+        printAllRestaurantNames() {
+          this.restaurantList.forEach(function (element) {
+            console.log(element.restaurantName);
+          });
+        }
+
+        filterRestaurantByCity(cityname) {
+          this.restaurantList.forEach(function (element) {
+            if (element.city === cityname) console.log(element);
+          });
+        }
+      }
+
+      var obj = new restaurantManager();
+      obj.printAllRestaurantNames();
+      obj.filterRestaurantByCity("Mumbai");
+    </script>
+  </body>
+</html>
